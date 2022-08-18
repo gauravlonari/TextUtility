@@ -5,7 +5,7 @@ import FormBody from './components/FormBody';
 import Navbar from './components/Navbar';
 import { useState } from 'react';
 import Alert from './components/Alert';
-import { BrowserRouter,HashRouter,Routes,Route } from 'react-router-dom';
+import { HashRouter,Routes,Route } from 'react-router-dom';
 import Error404 from './components/Error404';
 
 function App(){
