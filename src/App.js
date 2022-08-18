@@ -43,7 +43,7 @@ function App(){
       <Routes>
         <Route path='/home' element={<FormBody label="Enter the text: " placeholder="Lorem Ipsum" row={6} theme={theme} showAlert={showAlert}></FormBody>}>
         </Route>
-        <Route path='/textutility' element={<FormBody label="Enter the text: " placeholder="Lorem Ipsum" row={6} theme={theme} showAlert={showAlert}></FormBody>}>
+        <Route path='/TextUtility' element={<FormBody label="Enter the text: " placeholder="Lorem Ipsum" row={6} theme={theme} showAlert={showAlert}></FormBody>}>
         </Route>
         <Route path='/' element={<FormBody label="Enter the text: " placeholder="Lorem Ipsum" row={6} theme={theme} showAlert={showAlert}></FormBody>}>
         </Route>
@@ -53,11 +53,6 @@ function App(){
         </Route>
       </Routes>
     </HashRouter>
-    {/* <BrowserRouter>
-    <Routes>
-      <Route path="*" element={<Error404 theme={theme}/>}></Route>
-    </Routes>
-    </BrowserRouter> */}
     </>
   );
 }
