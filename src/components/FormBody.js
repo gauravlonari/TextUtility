@@ -98,6 +98,17 @@ const handleToLower=()=>{
     props.showAlert("success","Opposite the case");
     addHistory("Opposite Case: ["+tempText+"]");
   }
+  const handleToSentence=()=>{
+    if(mainText.length<1){
+      props.showAlert("danger","Empty Text");
+      return;
+    }
+    
+    let tempText = mainText.toLowerCase().replace(/(^\s*\w|[.!?]\s*\w)/g,(c)=>{return c.toUpperCase()});
+    setMainText(tempText);
+    props.showAlert("success","Converted to sentence case");
+    addHistory("Sentence Case: ["+tempText+"]");
+  }
   
   return (
     <>
@@ -110,6 +121,7 @@ const handleToLower=()=>{
     <div className="container d-flex mt-3 align-items-center justify-content-center flex-wrap">
         <button className="btn btn-success m-2" onClick={handleToUpper}>Convert to UpperCase</button>    
         <button className="btn btn-success m-2" onClick={handleToLower}>Convert to LowerCase</button>    
+        <button className="btn btn-success m-2" onClick={handleToSentence}>Convert to Sentence Case</button>    
         <button className="btn btn-success m-2" onClick={handleAlternate}>Alternate Case</button>    
         <button className="btn btn-success m-2" onClick={handleOpposite}>Opposite Case</button>    
         <button className="btn btn-success m-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>    
